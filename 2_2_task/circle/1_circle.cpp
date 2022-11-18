@@ -126,7 +126,7 @@ float Circle::getDistance(const Point& p) const {
 }
 
 bool Circle::isColliding(const Circle& c) {
-	return center.distance(c.center) < radius + c.radius && center.distance(c.center) < radius - c.radius;
+	return center.distance(c.center) < radius + c.radius && center.distance(c.center) > radius - c.radius;
 }
 
 void Circle::move(const Point& p) {
